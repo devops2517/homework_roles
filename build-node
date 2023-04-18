@@ -12,4 +12,4 @@
     dest: /home/mast/boxfuse-sample-java-war-hello
 
 - name: Build project
-  shell: mvn package -f /home/user/boxfuse-sample-java-war-hello
+  shell: mvn package -f /home/mast/boxfuse-sample-java-war-hello
