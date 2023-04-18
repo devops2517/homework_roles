@@ -1,3 +1,4 @@
+---
 - name: Install JDK and Tomcat
   apt:
     name:
@@ -7,8 +8,9 @@
 
 - name: Copy .war file to prod node
   copy:
-    src: /home/mast/boxfuse-sample-java-war-hello/target/hello-1.0.war
-    dest: /var/lib/tomcat8/webapps/
+    src: /opt/hello-world/target/hello-1.0.war
+    dest: /var/lib/tomcat8/webapps/hello.war
+    mode: 0644
 
 - name: Restart Tomcat
   service:

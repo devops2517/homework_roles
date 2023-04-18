@@ -10,6 +10,7 @@
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
     dest: /opt/hello-world
+    version: master
 
 - name: Build project
   shell: mvn package -f /opt/hello-world/pom.xml
