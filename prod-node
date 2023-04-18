@@ -1,0 +1,16 @@
+- name: Install JDK and Tomcat
+  apt:
+    name:
+      - openjdk-8-jdk
+      - tomcat8
+    update_cache: yes
+
+- name: Copy .war file to prod node
+  copy:
+    src: /home/user/boxfuse-sample-java-war-hello/target/hello-1.0.war
+    dest: /var/lib/tomcat8/webapps/
+
+- name: Restart Tomcat
+  service:
+    name: tomcat8
+    state: restarted
