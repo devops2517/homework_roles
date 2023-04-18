@@ -1,0 +1,7 @@
+- hosts: build-node
+  roles:
+    - build-node
+
+- hosts: prod-node
+  roles:
+    - prod-node
