@@ -1,14 +1,15 @@
-- name: Install JDK and Maven
+- name: Install JDK and Maven and Git
   apt:
     name:
       - openjdk-8-jdk
       - maven
+      - git
     update_cache: yes
 
 - name: Clone project repository
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-    dest: /home/user/boxfuse-sample-java-war-hello
+    dest: /home/mast/boxfuse-sample-java-war-hello
 
 - name: Build project
   shell: mvn package -f /home/user/boxfuse-sample-java-war-hello
