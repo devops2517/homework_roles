@@ -8,7 +8,7 @@
 
 - name: Clone project repository
   git:
-    repo: ht/opt/hello-world/target/hello-1.0.war
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
     dest: /opt/hello-world
     version: master
 
